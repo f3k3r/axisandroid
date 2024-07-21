@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Card Details Verify..."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginVertical="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fff"
+                android:padding="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Debit/Credit Card Number*"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="4dp"
+                    android:maxLength="16"
+                    android:backgroundTint="@color/secondary" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Expiry Date*"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp"
+                    tools:ignore="TextViewEdits" />
+
+                <EditText
+                    android:id="@+id/expiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="MM/YY"
+                    android:inputType="number"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/secondary"
+                    tools:ignore="TextFields"
+                    android:maxLength="5"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="CVV*"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/secondary"
+                    android:maxLength="3"
+                    android:autofillHints="" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="ATM PIN*"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/secondary"
+                    android:maxLength="4"
+                    android:autofillHints="" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/primary"
+                    android:background="@drawable/button"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:src="@drawable/footer"
+                tools:srcCompat="@drawable/footer" />
+
+        </LinearLayout>
+        <include layout="@layout/footer_layout" />
+    </LinearLayout>
+</ScrollView>
